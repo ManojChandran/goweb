@@ -69,7 +69,7 @@ func updateBook(w http.ResponseWriter, r *http.Request)  {
       var book Book
       _= json.NewDecoder(r.Body).Decode(&book)
       // mock id
-      book.ID = strconv.Itoa(rand.Intn(1000000))
+      book.ID = params["id"]
       books = append(books, book)
       json.NewEncoder(w).Encode(book)
       return
