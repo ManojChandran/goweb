@@ -15,5 +15,5 @@ func homePage(res http.ResponseWriter, req *http.Request) {
     http.NotFound(res, req)
     return
   }
-  fmt.Fprintf(res, "Hi there, How r u?")
+  fmt.Fprintf(res, "your server is up")
 }
